@@ -3,24 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
     <title>specTangular!!!</title>
   </head>
   <body>
-    <h1>Welcome to SpecTangular Jewels!</h1>
-    <p>{{"I am the worlds most" + " AMAZING!!! " + "developer/ jewelry seller!!!!"}}</p>
-    <section ng-controller="StoreController as store">
-      <h2>Here are my Beautiful Jewels! See anything you like?</h2>
-      <div ng-hide="store.product.soldOut">
-        <h3>{{store.product.name}}</h3>
-        <h3>£{{store.product.price}}</h3>
-        <h3>{{store.product.colour}}</h3>
-        <p>{{store.product.description}}</p>
-        <button ng-show="store.product.canPurchase"> Add to Cart </button>
-      </div>
-    </section>
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <div class="container">
+      <header class="row"></header>
+      <h1>Welcome to SpecTangular Jewels!</h1>
+      <p>{{"I am the worlds most" + " AMAZING!!! " + "developer/ jewelry seller!!!!"}}</p>
+      <section ng-controller="StoreController as store" class="row">
+        <h2>Here are my Beautiful Jewels! See anything you like?</h2>
+        <div ng-repeat="product in store.products">
+          <h3>{{product.name}}</h3>
+          <h3>£{{product.price}}</h3>
+          <h3>{{product.colour}}</h3>
+          <p>{{product.description}}</p>
+          <button ng-show="product.canPurchase"> Add to Cart </button>
+        </div>
+      </section>
+      <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+    </div>
   </body>
 </html>
