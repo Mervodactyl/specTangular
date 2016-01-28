@@ -15,18 +15,26 @@
       <section ng-controller="StoreController as store">
         <h2>Here are my Beautiful Jewels! See anything you like?</h2>
 
-        <ul class="list-group" ng-repeat="product in store.products | orderBy: '-price'"> <!---without '-' it displays cheapest first as default --->
-          <li class="list-group-item"><h3>{{product.name}}<em class="pull-right">{{product.price | currency }}</em></h3></li>
+        <ul class="list-group" ng-repeat="product in store.products | orderBy: '-price'">
+          <li class="list-group-item">
+            <h3>{{product.name}}<em class="pull-right">{{ product.price | currency }}</em>
+              <img ng-src="{{product.images[0].thumb}}"/>
+            </h3>
+          </li>
         </ul>
 
 
-        <div ng-repeat="product in store.products">
+        <!-- <div ng-repeat="product in store.products">
           <h3>{{product.name}}</h3>
-          <h3>£{{product.price}}</h3>
+          <img ng-src="{{product.images[0].thumb}}"/>
+          <h3>{{product.price}}</h3>
           <h3>{{product.colour}}</h3>
           <p>{{product.description}}</p>
           <button ng-show="product.canPurchase"> Add to Cart </button>
-        </div>
+        </div> -->
+
+
+
       </section>
       <script type="text/javascript" src="js/angular.min.js"></script>
       <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>

@@ -14,14 +14,14 @@
     canPurchase : true,
     // soldOut : false,
     description : "These crystals have a good action within your brain to assist learning. They help you to feel greater mental discipline and might also kindle lucid dreaming.",
-    images [
+    images : [
       {
-        full : "saphireCrystalFull.jpg",
-        thumb : "saphireCrystalThumb.jpg",
+        full : "./styles/images/saphireCrystalFull.jpg",
+        thumb : "./styles/images/saphireCrystalThumb.jpg",
       },
       {
-        full : "saphireCrystalFull1.jpg",
-        thumb : "saphireCrystalThumb1.jpg",
+        full : "./styles/images/saphireCrystalFull1.jpg",
+        thumb : "./styles/images/saphireCrystalThumb1.jpg",
       }
     ]
   },
@@ -32,14 +32,14 @@
     canPurchase : true,
     // soldOut : false,
     description : "This causes very strong reactions as the energy moves up your spine. The intensity of this experience often stimulates sexual feelings, as it opens new areas to create 'enlightenment'.",
-    images [
+    images : [
       {
-        full : "serpentineStoneFull.jpg",
-        thumb : "serpentineStoneThumb.jpg",
+        full : "./styles/images/serpentineStoneFull.jpg",
+        thumb : "./styles/images/serpentineStoneThumb.jpg",
       },
       {
-        full : "serpentineStoneFull1.jpg",
-        thumb : "serpentineStoneThumb1.jpg",
+        full : "./styles/images/serpentineStoneFull1.jpg",
+        thumb : "./styles/images/serpentineStoneThumb1.jpg",
       }
     ]
   },
@@ -50,14 +50,14 @@
     canPurchase : true,
     // soldOut : true,
     description : "These are one of the strongest stones for manifestation, as they help you to let go of fear. This will allow the flow of positive energy into your life, and create an increase in your prosperity, and this includes your capacity to manifest money.",
-    images [
+    images : [
       {
-        full : "citrineCrystalFull.jpg",
-        thumb : "citrineCrystalThumb.jpg",
+        full : "./styles/images/citrineCrystalFull.jpg",
+        thumb : "./styles/images/citrineCrystalThumb.jpg",
       },
       {
-        full : "citrineCrystalFull1.jpg",
-        thumb : "citrineCrystalThumb1.jpg",
+        full : "./styles/images/citrineCrystalFull1.jpg",
+        thumb : "./styles/images/citrineCrystalThumb1.jpg",
       }
     ]
   },
@@ -68,14 +68,14 @@
     canPurchase : true,
     // soldOut : false,
     description : "It helps to break destructive thought patterns and will enhance your problem solving skills. It aids emotional healing, and encourages happiness, contentment and a joy filled life.",
-    images [
+    images : [
       {
-        full : "thuliteGemFull.jpeg",
-        thumb : "thuliteGemThumb.jpeg",
+        full : "./styles/images/thuliteGemFull.jpg",
+        thumb : "./styles/images/thuliteGemThumb.jpg",
       },
       {
-        full : "thuliteGemFull1.jpeg",
-        thumb : "thuliteGemThumb1.jpeg",
+        full : "./styles/images/thuliteGemFull1.jpg",
+        thumb : "./styles/images/thuliteGemThumb1.jpg",
       }
     ]
   }
