@@ -6,23 +6,25 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <title>specTangular!!!</title>
   </head>
-  <body>
+  <body ng-controller="StoreController as store">
     <div class="container">
       <header class="row">
         <h1>Welcome to SpecTangular Jewels!</h1>
+        <h2>Here are my Beautiful Jewels! See anything you like?</h2>
         <p>{{"I am the worlds most" + " AMAZING!!! " + "developer/ jewelry seller!!!!"}}</p>
       </header>
-      <section ng-controller="StoreController as store">
-        <h2>Here are my Beautiful Jewels! See anything you like?</h2>
-
-        <ul class="list-group" ng-repeat="product in store.products | orderBy: '-price'">
-          <li class="list-group-item">
-            <h3>{{product.name}}<em class="pull-right">{{ product.price | currency }}</em>
-              <img ng-src="{{product.images[0].thumb}}"/>
-            </h3>
-          </li>
-        </ul>
-
+      <section>
+        <div>
+          <ul class="list-group" ng-repeat="product in store.products | orderBy: '-price'">
+            <li class="list-group-item">
+              <h3>{{product.name}}<em class="pull-right">{{ product.price | currency }}</em>
+                <img ng-src="{{product.images[0].thumb}}"/>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
 
         <!-- <div ng-repeat="product in store.products">
           <h3>{{product.name}}</h3>
@@ -32,14 +34,14 @@
           <p>{{product.description}}</p>
           <button ng-show="product.canPurchase"> Add to Cart </button>
         </div> -->
+      <!-- </section>
+    </div> -->
 
 
 
-      </section>
       <script type="text/javascript" src="js/angular.min.js"></script>
       <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/app.js"></script>
-    </div>
   </body>
 </html>
