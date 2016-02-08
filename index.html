@@ -13,13 +13,31 @@
         <h2>Here are my Beautiful Jewels! See anything you like?</h2>
         <p>{{"I am the worlds most" + " AMAZING!!! " + "developer/ jewelry seller!!!!"}}</p>
       </header>
-        <section>
+        <section ng-init="tab = 1">
           <ul class="nav nav-pills">
-            <li><a href ng-click="tab = 1">Description</a></li>
-            <li><a href ng-click="tab = 2">Specification</a></li>
-            <li><a href ng-click="tab = 3">Reviews</a></li>
+            <li ng-class="{ active:tab === 1}">
+              <a href ng-click="tab = 1">Description</a>
+            </li>
+            <li ng-class="{ active:tab === 2}">
+              <a href ng-click="tab = 2">Specification</a>
+            </li>
+            <li ng-class="{ active:tab === 3}">
+              <a href ng-click="tab = 3">Reviews</a>
+            </li>
           </ul>
           {{tab}}
+          <div class="panel" ng-show="tab === 1">
+            <h4>Description</h4>
+            <p>{{products.description}}</p>
+          </div>
+          <div class="panel" ng-show="tab === 2">
+            <h4>Specification</h4>
+            <blockquote>None Yet</blockquote>
+          </div>
+          <div class="panel" ng-show="tab === 3">
+            <h4>Reviews</h4>
+            <blockquote>None Yet</blockquote>
+          </div>
         </section>
 
 
