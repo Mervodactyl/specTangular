@@ -13,7 +13,18 @@
         <h2>Here are my Beautiful Jewels! See anything you like?</h2>
         <p>{{"I am the worlds most" + " AMAZING!!! " + "developer/ jewelry seller!!!!"}}</p>
       </header>
-      <section>
+        <section>
+          <ul class="nav nav-pills">
+            <li><a href ng-click="tab = 1">Description</a></li>
+            <li><a href ng-click="tab = 2">Specification</a></li>
+            <li><a href ng-click="tab = 3">Reviews</a></li>
+          </ul>
+          {{tab}}
+        </section>
+
+
+    </div>
+      <!-- <section>
         <div>
           <ul class="list-group" ng-repeat="product in store.products | orderBy: '-price'">
             <li class="list-group-item">
@@ -23,8 +34,8 @@
             </li>
           </ul>
         </div>
-      </section>
-    </div>
+      </section> -->
+    <!-- </div> -->
 
         <!-- <div ng-repeat="product in store.products">
           <h3>{{product.name}}</h3>
