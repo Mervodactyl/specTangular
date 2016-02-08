@@ -13,64 +13,45 @@
         <h2>Here are my Beautiful Jewels! See anything you like?</h2>
         <p>{{"I am the worlds most" + " AMAZING!!! " + "developer/ jewelry seller!!!!"}}</p>
       </header>
-        <section ng-controller="PanelController as panel">
+      <section ng-repeat="products in store.products">
+        <ul ng-repeat="products in store.products | orderBy:'-price'" class="list-group">
+          <li class="list-group-item">
+            <h3>{{ products.name }}
+              <em class="pull-right">{{ products.price | currency:"£" }}</em>
+              <img ng-src="{{ products.images[0].thumb }}" class="gallery"/>
+            </h3>
+          </li>
+        </ul>
+        <div ng-controller="PanelController as panel">
           <ul class="nav nav-pills">
-            <li ng-class="{ active:panel.isSelected(1)}">
+            <li ng-class="{ active:panel.isSelected(1) }">
               <a href ng-click="panel.selectTab(1)">Description</a>
             </li>
-            <li ng-class="{ active:panel.isSelected(2)}">
-              <a href ng-click="panel.selectTab(2)">Specification</a>
+            <li ng-class="{ active:panel.isSelected(2) }">
+              <a href ng-click="panel.selectTab(2)">Specicifcation</a>
             </li>
-            <li ng-class="{ active:panel.isSelected(3)}">
+            <li ng-class="{ active:panel.isSelected(3) }">
               <a href ng-click="panel.selectTab(3)">Reviews</a>
             </li>
           </ul>
-          {{tab}}
           <div class="panel" ng-show="panel.isSelected(1)">
-            <h4>Description</h4>
-            <p>{{products.description}}</p>
+            <h3>Description</h3>
+            <blockquote>{{ products.description }}</blockquote>
           </div>
           <div class="panel" ng-show="panel.isSelected(2)">
-            <h4>Specification</h4>
+            <h3>Specifications</h3>
             <blockquote>None Yet</blockquote>
           </div>
           <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Reviews</h4>
             <blockquote>None Yet</blockquote>
           </div>
-        </section>
-
-
-    </div>
-      <!-- <section>
-        <div>
-          <ul class="list-group" ng-repeat="product in store.products | orderBy: '-price'">
-            <li class="list-group-item">
-              <h3>{{product.name}}<em class="pull-right">{{ product.price | currency }}</em>
-                <img ng-src="{{product.images[0].thumb}}"/>
-              </h3>
-            </li>
-          </ul>
         </div>
-      </section> -->
-    <!-- </div> -->
-
-        <!-- <div ng-repeat="product in store.products">
-          <h3>{{product.name}}</h3>
-          <img ng-src="{{product.images[0].thumb}}"/>
-          <h3>{{product.price}}</h3>
-          <h3>{{product.colour}}</h3>
-          <p>{{product.description}}</p>
-          <button ng-show="product.canPurchase"> Add to Cart </button>
-        </div> -->
-      <!-- </section>
-    </div> -->
-
-
-
-      <script type="text/javascript" src="js/angular.min.js"></script>
-      <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/app.js"></script>
+      </section>
+    </div>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

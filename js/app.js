@@ -23,8 +23,25 @@
         full : "./styles/images/saphireCrystalFull1.jpg",
         thumb : "./styles/images/saphireCrystalThumb1.jpg",
       }
-    ]
-  },
+    ],
+    reviews : [
+        {
+          stars : 3,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 4,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 6,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+      ],
+    },
   {
     name : "Serpentine Stone",
     price : "14",
@@ -41,8 +58,25 @@
         full : "./styles/images/serpentineStoneFull1.jpg",
         thumb : "./styles/images/serpentineStoneThumb1.jpg",
       }
-    ]
-  },
+    ],
+    reviews : [
+        {
+          stars : 3,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 4,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 6,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+      ],
+    },
   {
     name : "Citrine Crystals",
     price : "14.25",
@@ -59,8 +93,25 @@
         full : "./styles/images/citrineCrystalFull1.jpg",
         thumb : "./styles/images/citrineCrystalThumb1.jpg",
       }
-    ]
-  },
+    ],
+    reviews : [
+        {
+          stars : 3,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 4,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 6,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+      ],
+    },
   {
     name : "Thulite Gem",
     price : "14.90",
@@ -77,10 +128,27 @@
         full : "./styles/images/thuliteGemFull1.jpg",
         thumb : "./styles/images/thuliteGemThumb1.jpg",
       }
-    ]
-  }
-]
-
+    ],
+    reviews : [
+        {
+          stars : 3,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 4,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+        {
+          stars : 6,
+          body : "Donec consectetur, mi sed vulputate pretium, nisl dolor placerat leo, et tincidunt lorem orci at erat. Donec fringilla tempus placerat",
+          author : "someone@blahblah.co.uk"
+        },
+      ],
+    }
+  ]
+  
   app.controller("PanelController", function() {
     this.tab = 1;
 
