@@ -44,12 +44,12 @@
           </div>
           <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Reviews</h4>
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
             <blockquote>
-              <b>Stars: {{ review.stars }}</b>
-              {{ review.body }}
-              <cite>{{ review.author }}</cite>
-              <form name="review-form">
-                <select ng-model="review.stars">
+              <b>Stars: {{ reviewCtrl.review.stars }}</b>
+              {{ reviewCtrl.review.body }}
+              <cite>{{ reviewCtrl.review.author }} on {{ review.createdOn | date }}</cite>
+                <select ng-model="reviewCtrl.review.stars" required>
                   <option value="1">1 Star</option>
                   <option value="2">2 Stars</option>
                   <option value="3">3 Stars</option>
@@ -57,9 +57,10 @@
                   <option value="5">5 Stars</option>
                   <option value="6">6 Stars</option>
                 </select>
-                <textarea ng-model="review.body"></textarea>
+                <textarea ng-model="reviewCtrl.review.body" required></textarea>
                 <label>By: </label>
-                <input ng-model="review.author" type="email"/>
+                <input name="author" ng-model="reviewCtrl.review.author" type="email"required/>
+                <div>review form is {{ reviewForm.$valid }}</div>
                 <input type="submit" value="Submit"/>
               </form>
             </blockquote>
